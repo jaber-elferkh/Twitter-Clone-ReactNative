@@ -3,11 +3,14 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     marginLeft: 15,
-    borderWidth: 1,
-    borderColor: 'whitesmoke',
+    flex: 1,
+  },
+  PostContainer: {
     borderRadius: 15,
     padding: 10,
-    flex: 1,
+    borderWidth: 1,
+    borderColor: 'whitesmoke',
+    marginBottom: 5,
   },
   TopCotainer: {
     flexDirection: 'row',
@@ -29,7 +32,18 @@ const styles = StyleSheet.create({
     color: 'grey',
     marginLeft: 7,
   },
-  moreIcon: {},
+  content: {
+    marginTop: 5,
+    // marginBottom: 10,
+  },
+  image: {
+    width: '100%',
+    height: 200,
+    resizeMode: 'cover',
+    marginTop: 10,
+    borderRadius: 15,
+    overflow: 'hidden',
+  },
 });
 
 export default styles;
