@@ -5,6 +5,7 @@ import TweetsData from '../../../data/TweetsData';
 import { TweetType } from '../../../types';
 import Footer from './Footer';
 import styles from './styles';
+import moment from 'moment';
 
 export type MainContainerProps = {
   tweet: TweetType;
@@ -17,10 +18,12 @@ const MainContainer = ({ tweet }: MainContainerProps) => (
         <View style={styles.TopCotainerLeft}>
           <Text style={styles.name}>{tweet.user.name}</Text>
           <Text style={styles.username}>@{tweet.user.username}</Text>
-          <Text style={styles.createdAt}>33m</Text>
+          <Text style={styles.createdAt}>
+            {moment(tweet.createdAt).fromNow()}
+          </Text>
         </View>
         <Entypo
-          style={styles.moreIcon}
+          // style={styles.moreIcon}
           name="chevron-down"
           size={16}
           color="grey"
